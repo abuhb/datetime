@@ -1,0 +1,13 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <input type='datetime-local' onChange='alert(event.target.value)'>
+    
+    <script>
+      const onChange = (event) => {
+    event.target.value = event.target.value.substr(0, 16);
+}
+    </script>
+  </body>
+</html>
