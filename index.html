@@ -2,12 +2,6 @@
   <head>
   </head>
   <body>
-    <input type='datetime-local' onChange='alert(event.target.value)'>
-    
-    <script>
-      const onChange = (event) => {
-    event.target.value = event.target.value.substr(0, 16);
-}
-    </script>
+    <input type='datetime-local' value="2020-01-01T11:00" onChange='alert(event.target.value)'>
   </body>
 </html>
