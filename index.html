@@ -1,7 +1,36 @@
-<html>
-  <head>
-  </head>
-  <body>
-    <input type='datetime-local' value="2020-01-01T11:00" onChange='alert(event.target.value)'>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWSA Datepicker</title>
+</head>
+<body>
+  <form>
+    <label for="admission-date"><b>Admission Date:</b></label>
+      <input type="date" class="form-control" name="admission-date" id="admission-date" required />
+      
+    <label for="admission-time"><b>Admission Time:</b></label>
+      <input type="time" class="form-control" name="admission-time" id="admission-time" required />
+<p>
+      <input type="text" name="admission-datetime" id="admission-datetime" />
+    </p>
+  </form>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+
+<script>
+   // Jake concat
+   $('#admission-time').change(function () {
+            var date = $("#admission-date").val();
+            var time = $("#admission-time").val();
+            var admissionDatetime = date + " " + time;
+            $("#admission-datetime").val(admissionDatetime);
+            
+        });</script>
+</body>
 </html>
